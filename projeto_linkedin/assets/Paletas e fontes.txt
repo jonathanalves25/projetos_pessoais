@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+
+
+Roxo - #301F51
+Vermelho - #A22C29
+Laranja - #E98A15
+Magenta - #D30C7B
+Verde agua - #93E5AB
