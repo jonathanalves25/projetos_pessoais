@@ -422,9 +422,15 @@ footer {
         padding:20px;
     }
 
+    .area1--content h2,
+    .area2--content h2,
+    .area3--content h2,
+    .area4--content h2 {
+        font-size:34px;
+    }
+
     .area3--content h2 {
         margin-left:0;
-        font-size:36px;
     }
 
     .area3--text {
