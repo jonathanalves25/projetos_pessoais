@@ -30,11 +30,11 @@
                 <form action="">
                     <span class="titulo">Sign up</span>
                     <div class="field-input">
-                        <input type="email" name="email" placeholder="E-mail">
+                        <input type="email" name="email" placeholder="E-mail" class="email" required>
                     </div>
 
                     <div class="field-input">
-                        <input type="password" name="password" placeholder="Password" >
+                        <input type="password" name="password" placeholder="Password" class="password" required>
                     </div>
 
                     <div class="field-checkBx">
@@ -43,7 +43,7 @@
                     </div>
 
                     <div class="fields-btn">
-                        <a href="" class="sign">Sign up</a>
+                        <a href="" class="sign" onclick="enviar()">Sign up</a>
                         <a href="" class="lost">Have an account?</a>
                     </div>
 
@@ -53,6 +53,6 @@
             </div>
         </div>
     </div>
-    
+    <script src="script.js"></script>
 </body>
 </html>
