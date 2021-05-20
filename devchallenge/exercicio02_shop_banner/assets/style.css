@@ -1,0 +1,188 @@
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+.header {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height:70px;
+}
+
+.header ul {
+    display: flex;
+    align-items: center;
+}
+
+.header ul li {
+    list-style: none;
+    padding-right:15px;
+}
+
+.header ul li a {
+    text-decoration: none;
+    color:#454545;
+    transition: 0.5s;
+}
+
+.header ul li a:hover {
+    color:#6b6b6b;
+    letter-spacing: 2px;
+}
+
+.header .menu-cart a {
+    margin-right:20px;
+    color:#454545;
+}
+
+.header .menu-cart a:hover {
+    color:#6b6b6b;
+}
+
+.banner .row {
+    margin-top:50px;
+    max-width:1140px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner .col-4 {
+    margin:0;
+    padding:0;
+}
+
+.banner .col-6 img {
+    width:100%;
+}
+
+.banner .banner-text h2 {
+    font-size:2.5em;
+    color:#e93939;
+    text-transform: uppercase;
+
+}
+
+.banner .reputation {
+    color:#e93939;
+    margin: 10px 0px;
+}
+
+.banner .reputation i:hover {
+    cursor: pointer;
+    color:#ec6363;
+}
+
+.banner .banner-descrip h3 {
+    font-size:1em;
+    font-weight: bold;
+}
+
+.banner .banner-descrip p {
+    font-size:1em;
+    color:#757575
+}
+
+.banner .banner-price {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.banner .banner-price h2 {
+    font-size:2em;
+    font-weight: bold;
+    color:#000;
+    margin-right:50px;
+}
+
+.banner .banner-price a {
+    text-decoration: none;
+    color:#fff;
+    background: #e93939;
+    padding:5px 30px;
+}
+
+.banner .banner-price a:hover {
+    background:#ec6363;
+}
+
+.banner-footer {
+    background: beige;
+    height:90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-item {
+    display: flex;
+    align-items: center;
+    width:30%;
+}
+
+.footer-item p {
+    padding-top:15px;
+    padding-left:15px;
+}
+
+
+
+@media (max-width:425px) {
+    .header .menu {
+        display: none;
+    }
+
+    .banner .row {
+        flex-direction: column;
+    }
+
+    .banner .col-6 {
+        width:100%;
+    }
+
+    .banner .col-6 img {
+        max-width:350px;
+    }
+
+    .banner .col-4 {
+        width:100%;
+    }
+
+    .banner-text {
+        width:70%;
+        margin: auto;
+    }
+
+    .banner .banner-text h2 {
+        font-size:2em;
+    }
+
+    .banner .banner-price h2 {
+        font-size:1.5em;
+        margin-right:20px;
+    }
+
+    .banner .banner-price a {
+        font-size:0.8em;
+        padding:5px 20px;
+    }
+
+    .banner-footer {
+        flex-direction: column;
+        width:90%;
+        height:100%;
+    }
+
+    .footer-item {
+        width:80%;
+        justify-content: center;
+        margin-top:10px;
+    }
+
+    .footer-item p {
+        padding-top:0px;
+    }
+}
