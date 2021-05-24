@@ -443,109 +443,110 @@ section.habilidades {
     position: absolute;
 }
 
-footer.contato {
-    width:100%;
-    height:100vh;
-    display: flex;
-    flex-direction:column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    background: rgba(17, 17, 17, 0.322);
-    margin-top:50px;
-    margin:auto;
+.contato {
+    background: #0c0e149d;
+
 }
 
-footer.contato h2 {
-    font-size:3em;
-    font-weight:600;
+.contato-title {
+    padding-top:30px;
+    padding-bottom:30px;
+}
+
+.contato-title h2 {
     color:#6F6C6C;
-    margin-top:30px;
+    font-size:3em;
+    font-weight:bold;
+    text-align: center;
 }
 
 .contato-area {
-    display:flex;
-    justify-content:space-between;
     width:100%;
     max-width:1140px;
-    padding:100px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin:auto;
 }
 
 .area-left {
-    width:50%;
-    padding-right:20px;
+    background: #1ed6ed;
+    position: relative;
+    left:140px;
+    bottom:20px;
+    padding:20px;
+    width:100%;
+    max-width:280px;
+    height:280px;
 }
 
 .area-left h2 {
-    font-size:2.0em;
-    color:#fff;
-    font-weight: 600;
+    font-size:1.8em;
 }
 
-.area-left p {
+.area-left span {
     font-size:1em;
-    color: #6F6C6C;
 }
 
-.area-left--contact {
-    position: relative;
-    display: flex;
-    margin: 30px 0px;
+.area-left--text {
+    display:flex;
+    align-items: center;
+    margin:15px 0px;
 }
 
-.area-left--contact img {
-    width:24px;
-    height:24px;
-    margin-right:15px;
+.area-left--text span {
+    padding-left:10px;
 }
 
 .area-right {
-    width:50%;
-    margin-top:40px;
-    padding-left:30px;
-}
-
-.form-group {
-    border-bottom: 4px solid #ed325f;
-    margin-bottom:10px;
-}
-
-.form-group input {
-    outline: none;
-    background: none;
-    color:#fff;
-    border:0;
-    padding-left:0;
+    background:#1e253a;
+    padding-top:80px;
+    padding-left:180px;
+    margin-right:40px;
+    margin-bottom:40px;
     width:100%;
+    height:420px;
 }
 
-.form-group input:focus {
-    outline: 0;
-    background: none;
-    color:#fff;
-    border:none;
+.area-right .form-label {
+    color:#1ed6ed;
+}
+
+
+.area-right .col-md-6 input {
+    max-width:270px;
     outline:none;
-    box-shadow:none;
-}
-
-.form-group label {
-    color:#fff;
-    margin-bottom:5px;
-}
-
-.btn {
-    width:100px;
-    background: #ed325f;
-    color:#fff;
-    outline:0;
+    background: none;
     border:0;
-    margin-top:15px;
+    border-bottom: 2px solid #1ed6ed;
+    border-radius:0;
+    color:#fff;
 }
 
-.btn:hover {
-    background: #c55670;
+.area-right .col-md-6 input:focus {
+    box-shadow: none;
 }
 
+.area-right .col-12 input {
+    max-width:605px;
+    outline:none;
+    background: none;
+    border:0;
+    border-bottom: 2px solid #1ed6ed;
+    border-radius:0;
+    color:#fff;
+}
+
+.area-right .col-12 input:focus {
+    box-shadow: none;
+}
+
+.area-right .btn-primary {
+    background: #1ed6ed;
+    color: #1e253a;
+    width:150px;
+    margin-top:20px;
+}
 
 
 @media (min-width:769px) and (max-width:1024px) {
@@ -671,9 +672,8 @@ footer.contato h2 {
         min-height:100vh;
     }
 
-    footer.contato {
-        flex-direction: row;
-        background: rgb(17, 17, 17);
+    .contato {
+        background: #1e253a;;
     }
 
     .contato-area {
@@ -682,24 +682,38 @@ footer.contato h2 {
         width: 100%;
         max-width: 1140px;
         min-height: 400px;
-        padding: 20px 30px;
     }
 
     .area-left {
-        width: 50%;
-        height: 50%;
-        margin: 20px;
-    }
-
-    .area-left h2 {
-        font-size:2em;
+        display: none;
     }
 
     .area-right {
-        width: 50%;
-        height: 50%;
-        margin-top: 50px;
+        background: #1e253a;
+        padding-top: 80px;
         padding-left: 30px;
+        margin:0;
+        width: 100%;
+        height: 420px;
+    }
+
+    .area-right .col-md-6 input {
+        max-width:655px;
+        outline:none;
+        background: none;
+        border:0;
+        border-bottom: 2px solid #1ed6ed;
+        border-radius:0;
+        color:#fff;
+    }
+
+    .area-right .col-12 input {
+        max-width: 655px;
+        outline: none;
+        background: none;
+        border: 0;
+        border-bottom: 2px solid #1ed6ed;
+        border-radius: 0;
     }
 }
 
@@ -734,10 +748,10 @@ footer.contato h2 {
 
     .content .contentBx a {
         text-decoration: none;
-        padding: 10px 10px;
+        padding: 10px 30px;
         background: #ed325f;
-        margin-right: 20px;
-        font-size: 0.7em;
+        margin-right: 10px;
+        font-size: 0.8em;
         color: #fff;
         border-radius: 5px;
         text-transform: uppercase;
@@ -745,14 +759,14 @@ footer.contato h2 {
     }
 
     .content .contentBx h2 {
-        font-size: 3.5em;
+        font-size: 2.8em;
         color: #fff;
         letter-spacing: 2px;
         line-height: 60px;
     }
 
     .content .contentBx h3 {
-        font-size: 2em;
+        font-size: 1.5em;
         color: #868484;
         letter-spacing: 2px;
         margin-bottom: 30px;
@@ -767,7 +781,7 @@ footer.contato h2 {
         display: flex;
         left: 0;
         bottom: 0;
-        margin-top: 60px;
+        margin-top: 30px;
         top: 300px;
         justify-content: center;
         align-items: center;
@@ -862,48 +876,33 @@ footer.contato h2 {
         background: #6F6C6C;
     }
 
-    footer.contato {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        background: rgb(17, 17, 17);
-        margin-top: 50px;
-        margin: auto;
+    .contato {
+        background: #1e253a;
     }
 
-    .contato-area {
-        display: flex;
-        justify-content: flex-start;
-        flex-direction: column;
-        height:100%;
-        background: rgb(17, 17, 17);
-        padding:10px;
-    }
     .area-left {
-        width:80%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        padding-left:20px;
-    }
-
-    .area-left--contact {
-        margin:10px 0;
-    }
-
-    #h2 {
-        font-size:2em;
+        display: none;
     }
 
     .area-right {
+        background: #1e253a;
+        padding:20px;
+        margin-right: 0;
+        margin-bottom: 0;
+        width: 100%;
+        height: 420px;
+    }
+
+    .area-right .col-md-6 input {
         width:100%;
-        margin-top:70px;
-        padding-left:20px;
-        background: rgb(17, 17, 17);
+        max-width:600px;
+        margin-right:0;
+        outline: none;
+        background: none;
+        border: 0;
+        border-bottom: 2px solid #1ed6ed;
+        border-radius: 0;
+        color: #fff;
     }
 
     .btn {
