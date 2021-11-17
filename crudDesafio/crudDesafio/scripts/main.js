@@ -70,16 +70,16 @@ const createRow = (item, index) => {
   document.querySelector("#tableItem>tbody").appendChild(newRow)
 }
 
+const clearTable = () => {
+  const rows = document.querySelectorAll('#tableItem>tbody tr')
+  rows.forEach(row => row.parentNode.removeChild(row))
+}
+
 const updateTable = () => {
   const dbItem = readItem()
   dbItem.forEach(createRow) 
 }
 
-
-const clearTable = () => {
-  const rows = document.querySelectorAll('#tableItem>tbody tr')
-  rows.forEach(row => row.parentNode.removeChild(row))
-}
 
 
 
