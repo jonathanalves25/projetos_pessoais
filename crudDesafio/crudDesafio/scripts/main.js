@@ -67,7 +67,7 @@ const createRow = (item, index) => {
     </td>
   `
 
-  document.querySelector("#tableItem>tbody").appendChild(newRow)
+  document.querySelector("tbody").appendChild(newRow)
 }
 
 const clearTable = () => {
@@ -83,7 +83,6 @@ const updateTable = () => {
 
 
 
-updateTable()
 
 
 
