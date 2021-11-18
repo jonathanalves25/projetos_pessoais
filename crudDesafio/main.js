@@ -2,6 +2,9 @@
 const getLocalStorage = () => JSON.parse(localStorage.getItem('db_item')) ?? []
 const setLocalStorage = (dbItem) => localStorage.setItem("db_item", JSON.stringify(dbItem))
 
+
+
+
 // CRUD - create read update delete
 const deleteItem = (index) => {
     const dbItem = readItem()
@@ -34,16 +37,23 @@ const clearFields = () => {
 
 // interação com o layout
 const saveItem = () => {
-  debugger
+
+  const dataInputVal = document.querySelector('#validade')
+  const dataInputFab = document.querySelector('#fabricacao')
+  const dataValForm = moment(dataInputVal.value)
+  const dataFabForm = moment(dataInputFab.value)
+  const precoFloat = parseFloat(document.querySelector('#preco').value)
+
+
   if (isValidFields()) {
     const item = {
       nome: document.querySelector('#nome').value,
       unidade: document.querySelector('#unidade').value,
       quantidade: document.querySelector('#quantidade').value,
-      preco: document.querySelector('#preco').value,
+      preco: precoFloat.toFixed(2),
       perecivel: document.querySelector('#perecivel').value,
-      validade: document.querySelector('#validade').value,
-      fabricacao: document.querySelector('#fabricacao').value
+      validade: dataValForm.format('DD/MM/YYYY'),
+      fabricacao: dataFabForm.format('DD/MM/YYYY')
     }
 
     const index = document.getElementById('nome').dataset.index
@@ -64,8 +74,8 @@ const createRow = (item, index) => {
   newRow.innerHTML = `
     <td>${item.nome}</td>
     <td>${item.unidade}</td>
-    <td>${item.quantidade}</td>
-    <td>${item.preco}</td>
+    <td>${item.quantidade} ${item.unidade}${item.quantidade > 1 ? 's' :''}</td>
+    <td>R$: ${item.preco}</td>
     <td>${item.perecivel}</td>
     <td>${item.validade}</td>
     <td>${item.fabricacao}</td>
@@ -143,10 +153,6 @@ document.querySelector('#cancelar')
 
 document.querySelector('#tableItem>tbody')
   .addEventListener('click', editDelete)
-
-
-
-
 
 
 // abertura do sideNav

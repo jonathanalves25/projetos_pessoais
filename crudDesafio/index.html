@@ -26,7 +26,6 @@
               <div class="col-option">
                 <label class="form-label">Unidade:</label>
                 <select id="unidade">
-                  <option selected>Selecione</option>
                   <option value="litro">Litro</option>
                   <option value="quilograma">Quilograma</option>
                   <option value="unidade">Unidade</option>
@@ -58,11 +57,11 @@
           <div class="row">
             <div class="col">
               <label class="form-label">Data de validade:</label>
-              <input id="validade" type="date" class="form-control" required>
+              <input id="validade" data-form-date type="date" class="form-control"  required>
             </div>
             <div class="col">
               <label class="form-label">Data de fabricação:</label>
-              <input id="fabricacao" type="date" class="form-control" required>
+              <input id="fabricacao" data-form-date type="date" class="form-control" required>
             </div>
           </div>
           
@@ -78,7 +77,7 @@
   </div>
   <div class="container-fluid">
     <div class="header">
-      <span style="font-size:30px;cursor:pointer" onclick="openNav()">Cadastrar</span>
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()"><h1>INCLUIR ITEM</h1></span>
       <h1>Lista de itens</h1>
     </div>
     <div class="table-area">
@@ -101,5 +100,7 @@
     </div>
   </div>
   </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
   <script src="main.js"></script>
 </body>
