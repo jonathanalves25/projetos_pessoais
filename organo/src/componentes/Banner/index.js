@@ -1,6 +1,6 @@
-import './Banner.css';
+import './style.css';
 
-function Banner() {
+const Banner = () => {
   return (
     <header className="banner">
       <img src="/imagens/banner.png" alt="O banner principal da pagina"/>
@@ -8,4 +8,4 @@ function Banner() {
   )
 }
 
-export default Banner;
+export default Banner
