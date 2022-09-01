@@ -7,9 +7,9 @@ import {useState} from 'react'
 const Formulario = (props) => {
   
   const times = [
-    'Programação',
     'Front-end',
     'Data Science',
+    'Programação',
     'DevOps',
     'UX e Design',
     'Mobile',
