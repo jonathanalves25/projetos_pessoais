@@ -1,0 +1,38 @@
+.nav-content {
+  display:flex;
+  align-items:center;
+  padding-top:40px;
+}
+
+.logo {
+  padding:0 40px;
+}
+
+.nav {
+  position: absolute;
+  right:0;
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  height:80px;
+  width:700px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.nav li {
+  list-style: none;
+  color:#D0D6F9;
+  padding:30px;
+  text-transform:uppercase;
+}
+
+.nav a {
+  text-decoration: none;
+}
+
+.nav a:hover {
+  border-bottom:3px solid #D0D6F9;
+}
