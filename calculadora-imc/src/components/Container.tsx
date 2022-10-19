@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import {levels, calculateImc} from '../helpers/imc'
+import {GridItem} from './GridItem'
 
 export const Container = () => {
 
@@ -28,8 +30,14 @@ export const Container = () => {
                 
                 <button className='bg-blue-200 w-full mt-4 p-2 rounded text-white hover:bg-opacity-80 hover:ease-in' onClick={handleCalculateButton}>Calcular</button>
             </div>
-            <div className="flex-1 ml-8 bg-black">
-                <p>Right side</p>
+            <div className="flex flex-1 ml-8">
+                <div className='flex-1 grid grid-cols-2 gap-5'>
+                    {levels.map((item, index) => (
+                        <GridItem key={index} item={item}/>
+                            
+                    ))}
+                </div>
+
             </div>
         </div>
     )
