@@ -1,8 +1,15 @@
 import { useState } from 'react';
 import {levels, calculateImc} from '../helpers/imc'
 import {GridItem} from './GridItem'
+import tw from 'tailwind-styled-components'
 
 export const Container = () => {
+
+    const ContainerInside:any = tw.div`
+        mx-auto 
+        flex 
+        max-w-4xl
+    `
 
     const [heightField, setHeightField] = useState<number>(0);
     const [weightField, setWeightField] = useState<number>(0);
@@ -18,7 +25,7 @@ export const Container = () => {
 
     return (
    
-        <div className="mx-auto flex max-w-4xl">
+        <div>
             <div className="flex-1 mr-8">
                 <h1 className='text-3xl font-bold text-gray-800 mb-8'>Calcule o seu IMC.</h1>
                 <p className='text-base mb-10 text-gray-400'>IMC é a sigla para Índice de Massa Corpórea, parametro adotado pela Organizacao Mundial de Saúde para calcular
