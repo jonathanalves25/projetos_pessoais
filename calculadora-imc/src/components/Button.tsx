@@ -22,4 +22,4 @@ const Button = ({text}:ButtonProps) => {
   )
 }
 
-export default Button
+export default Button;
