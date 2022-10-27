@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import tw from 'tailwind-styled-components'
-import {levels, calculateImc} from '../helpers/imc'
+import {levels, calculateImc, Level} from '../helpers/imc'
 import {GridItem} from './GridItem'
 import TextPrimary from './TextPrimary'
 import TextSecondary from './TextSecondary'
@@ -10,7 +10,7 @@ import Button from './Button'
 export const Container = () => {
 
     const ContainerInside:any = tw.div`
-        mx-auto 
+        mx-auto
         flex 
         max-w-4xl
     `
@@ -43,12 +43,21 @@ export const Container = () => {
         border-b-2
     `
 
+    const RightBig:any = tw.div`
+
+    `
+
+    const RightArrow:any = tw.div`
+
+    `
+
     const [heightField, setHeightField] = useState<number>(0);
     const [weightField, setWeightField] = useState<number>(0);
+    const [toShow, setToShow] = useState<Level | null>(null);
 
     const handleCalculateButton = () => {
         if(heightField && weightField) {
-            
+            setToShow(calculateImc(heightField, weightField));
         } else {
             alert('digite todos os campos')
         }
@@ -70,12 +79,22 @@ export const Container = () => {
                 <Button onClick={handleCalculateButton} text="Calcular"/>
             </LeftSide>
             <RightSide>
-                <ContainerGrid>
-                    {levels.map((item, index) => (
-                        <GridItem key={index} item={item}/>
+                {!toShow &&
+                    <ContainerGrid>
+                        {levels.map((item, index) => (
+                            <GridItem key={index} item={item}/>
                             
-                    ))}
-                </ContainerGrid>
+                        ))}
+                    </ContainerGrid>
+                }
+
+                {toShow &&
+                    <RightBig>
+                        <RightArrow>
+                        </RightArrow>
+                        <GridItem item={toShow}/>
+                    </RightBig>
+                }
             </RightSide>
         </ContainerInside>
     )

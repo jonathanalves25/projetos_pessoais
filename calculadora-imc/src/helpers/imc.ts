@@ -22,4 +22,5 @@ export const calculateImc = (height: number, weight:number) => {
             return levels[i]
         }
     }
+    return null;
 }
