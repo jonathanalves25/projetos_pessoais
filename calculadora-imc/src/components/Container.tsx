@@ -2,6 +2,7 @@ import { useState } from 'react';
 import tw from 'tailwind-styled-components'
 import {levels, calculateImc, Level} from '../helpers/imc'
 import {GridItem} from './GridItem'
+import LeftArrowImg from '../assets/leftarrow.png'
 import TextPrimary from './TextPrimary'
 import TextSecondary from './TextSecondary'
 import Button from './Button'
@@ -44,11 +45,21 @@ export const Container = () => {
     `
 
     const RightBig:any = tw.div`
-
+        flex-1
+        flex
     `
 
     const RightArrow:any = tw.div`
-
+        absolute
+        bg-blue
+        w-16
+        h-16
+        rounded
+        flex
+        justify-center
+        items-center
+        cursor-pointer
+        ml--8
     `
 
     const [heightField, setHeightField] = useState<number>(0);
@@ -57,10 +68,16 @@ export const Container = () => {
 
     const handleCalculateButton = () => {
         if(heightField && weightField) {
-            setToShow(calculateImc(heightField, weightField));
+            //setToShow(calculateImc(heightField, weightField));
         } else {
             alert('digite todos os campos')
         }
+    }
+
+    const handleBackButton = () => {
+        setToShow(null);
+        setHeightField(0);
+        setWeightField(0);
     }
 
     return (
@@ -74,7 +91,8 @@ export const Container = () => {
                 "/>
 
                 <InputField type="number" value={heightField > 0 ? heightField : ''} placeholder="Digite a sua altura. Ex: 1.5 em metros" onChange={(e: { target: { value: string; }; }) => setHeightField(parseFloat(e.target.value))} /> 
-                <InputField type="number" value={weightField > 0 ? weightField : ''} placeholder="Digite o seu peso. Ex: 75.3 em quilos" onChange={(e: { target: { value: string; }; }) => setWeightField(parseFloat(e.target.value))} /> 
+                <InputField type="number" value={weightField > 0 ? weightField : ''} placeholder="Digite o seu peso. Ex: 80kg" onChange={(e: { target: { value: string; }; }) => setWeightField(parseFloat(e.target.value))} /> 
+
                 
                 <Button onClick={handleCalculateButton} text="Calcular"/>
             </LeftSide>
@@ -91,7 +109,8 @@ export const Container = () => {
                 {toShow &&
                     <RightBig>
                         <RightArrow>
-                        </RightArrow>
+                            <img src={LeftArrowImg} alt="leftarrow" width={25} onClick={handleBackButton}/>
+                        </RightArrow>    
                         <GridItem item={toShow}/>
                     </RightBig>
                 }
