@@ -1,5 +1,6 @@
 import { Socials } from "../components/Socials"
 import ImgAvatar from '../assets/images/avatar1sembg.png'
+import { Link } from "react-router-dom"
 export const Home = () => {
   return(
     <div className="container-full h-3/4 flex justify-end items-center overflow-hidden">
@@ -8,7 +9,11 @@ export const Home = () => {
             <h2 className="text-8xl font-sans">Jonathan <span className="text-stone-800">Alves</span></h2>
             <p className="text-5xl pt-4 font-sans">Front-end Developer</p>
             <div className="mt-4 flex">
-              <p className="border-2 border-yellow-300 p-2 text-xl font-sans rounded hover:border-white hover:bg-white hover:text-stone-800 ease-in-out animate-pulse duration-300">Download CV</p>
+              <p className="border-2 border-yellow-300 p-2 text-xl font-sans rounded hover:border-white hover:bg-white hover:text-stone-800 ease-in-out animate-pulse duration-300">
+                <Link to=".././assets/curriculo/JonathanAlves.pdf" target="_blank" download>
+                  Download CV
+                </Link>
+              </p>
             </div>
             
           </div>
@@ -17,9 +22,6 @@ export const Home = () => {
               <img src={ImgAvatar} alt="Imagem de uma pessoa teclando no seu notebook" className="" />
             </div>
           </div>
-
-
-          
         </div>
         <Socials/>
       </div>

@@ -9,14 +9,26 @@ export const NavMenu = () => {
 
       <div className='mr-10'>
         <ul className="flex gap-10 font-sans text-yellow-200 text-xl uppercase pt-4">
-          <li>
+          <li className='hover:text-stone-700 ease-in-out duration-300'>
             <Link to='/'>
               Home
             </Link>
           </li>
-          <li>Sobre</li>
-          <li>Skills</li>
-          <li>Projetos</li>
+          <li className='hover:text-stone-700 ease-in-out duration-300'>
+            <Link to='/sobre'>
+              Sobre
+            </Link>
+          </li>
+          <li className='hover:text-stone-700 ease-in-out duration-300'>
+            <Link to='/skills'>
+              Skills
+            </Link>
+          </li>
+          <li className='hover:text-stone-700 ease-in-out duration-300'>
+            <Link to='/projetos'>
+              Projetos
+            </Link>
+          </li>
         </ul>
       </div>
     </div>
