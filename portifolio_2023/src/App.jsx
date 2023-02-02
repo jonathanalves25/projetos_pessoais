@@ -6,10 +6,10 @@ import { MainRoute } from './routes/MainRoute';
 function App() {
   return (
     <div className="container-full h-screen bg-indigo-600">
-        <nav>
-          <NavMenu/>
-        </nav>
-        <MainRoute/>
+      <nav>
+        <NavMenu/>
+      </nav>
+      <MainRoute/>
     </div>
   );
 }
