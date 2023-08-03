@@ -87,7 +87,7 @@ export const Profile = () => {
                     />     
                 
 
-                    <Heading color="gray.200" fontSize="md" alignSelf="flex-start" mb={2} mt={12}>
+                    <Heading color="gray.200" fontFamily="heading" fontSize="md" alignSelf="flex-start" mb={2} mt={12}>
                         Alterar senha
                     </Heading>
                     <Input

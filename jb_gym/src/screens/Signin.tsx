@@ -34,7 +34,7 @@ export const SignIn = () => {
                     </Text>
                 </Center>
                 <Center>
-                    <Heading color="gray.100" mb={6} fontFamily="heading">
+                    <Heading color="gray.100"  mb={6} fontFamily="heading">
                         Acesse sua conta
                     </Heading>
 

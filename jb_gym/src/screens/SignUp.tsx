@@ -108,7 +108,7 @@ export const SignUp = () => {
                         control={control}
                         name="password_confirm"
                         rules={{
-                            required:'Confirme a senha.'
+                            required:'Confirme a senha.'                            
                         }}
                         render={({field: {onChange, value}}) => (
                             <Input 
@@ -133,7 +133,7 @@ export const SignUp = () => {
                 <Button 
                     title="Voltar para o login" 
                     variant="outline"
-                    mt={24}
+                    mt={12}
                     onPress={handleGoBack}
                 />
 
