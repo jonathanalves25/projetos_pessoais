@@ -1,12 +1,13 @@
 import styled from "styled-components";
 
 export const HeaderContainer = styled.div`
-    max-width:1440px;
+    max-width:90rem;
     height:6.5rem;
     display:flex;
     justify-content:space-between;
     align-items:center;
     margin:auto;
+    margin: 0 5rem;
 `;
 
 export const Logo = styled.img`
