@@ -1,5 +1,9 @@
 import { CoffeeIntroArea, CoffeeIntroImg, CoffeeIntroItem, CoffeeIntroItemArea, CoffeeIntroText } from "./styles";
 import coffeeIntroImg from '../../assets/coffeIntro.png'
+import CartIntro from '../../assets/CartIntro.svg'
+import BoxIcon from '../../assets/BoxIcon.svg'
+import ClockIcon from '../../assets/ClockIcon.svg'
+import CoffeeIcon from '../../assets/CoffeeIcon.svg'
 
 export function Home() {
     return(
@@ -10,19 +14,19 @@ export function Home() {
 
                 <CoffeeIntroItemArea>
                     <CoffeeIntroItem>
-                        <img src="" alt="" />
+                        <img src={CartIntro} />
                         <p>Compra simples e segura</p>
                     </CoffeeIntroItem>
                     <CoffeeIntroItem>
-                        <img src="" alt="" />
+                        <img src={BoxIcon}/>
                         <p>Embalagem mantém o café intacto</p>
                     </CoffeeIntroItem>
                     <CoffeeIntroItem>
-                        <img src="" alt="" />
+                        <img src={ClockIcon}/>
                         <p>Entrega rápida e rastreada</p>
                     </CoffeeIntroItem>
                     <CoffeeIntroItem>
-                        <img src="" alt="" />
+                        <img src={CoffeeIcon}/>
                         <p>O café chega fresquinho até você</p>
                     </CoffeeIntroItem>
                 </CoffeeIntroItemArea>
