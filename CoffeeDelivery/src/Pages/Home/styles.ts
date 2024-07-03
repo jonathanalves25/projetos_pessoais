@@ -53,3 +53,14 @@ export const CoffeeIntroItem = styled.div`
         color:${props=> props.theme["base-text"]};
     }
 `;
+
+export const CoffeesArea = styled.div`
+    max-width:90rem;
+    margin:0 6rem;
+`;
+
+export const CoffeeTitle = styled.h1`
+    font-family: "Baloo 2", sans-serif;
+    font-size:2rem;
+    color: ${props => props.theme["base-subtitle"]}
+`;
